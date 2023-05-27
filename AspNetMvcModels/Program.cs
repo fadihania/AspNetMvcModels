@@ -1,6 +1,10 @@
+using AspNetMvcModels;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddSingleton(new Data());
+
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();

@@ -4,7 +4,7 @@ namespace AspNetMvcModels;
 
 public class Data
 {
-    public static List<Post> Posts = new()
+    public List<Post> Posts = new()
     {
         new Post { Id = 1, Title = "Post 1", Body = "Post 1 content", Author = "Ahmad Ali" },
         new Post { Id = 2, Title = "Post 2", Body = "Post 2 content", Author = "Saeed Mahmoud" },
