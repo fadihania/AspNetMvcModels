@@ -19,6 +19,7 @@ public class HomeController : Controller
 
     public IActionResult About()
     {
+        ViewData["Company"] = "Coddict";
         return View();
     }
 
