@@ -20,6 +20,7 @@ public class HomeController : Controller
     public IActionResult About()
     {
         ViewData["Company"] = "Coddict";
+        ViewBag.Address = "Gaza, Palestine";
         return View();
     }
 
