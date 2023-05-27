@@ -1,11 +1,24 @@
-﻿@model Post
+﻿@model List<Post>
 @{
     ViewData["Title"] = "Posts";
 }
 
 <h1>@ViewData["Title"]</h1>
 
-<p>@Model.Id</p>
-<p>@Model.Title</p>
-<p>@Model.Body</p>
-<p>@Model.Author</p>
+<table class="table table-striped table-hover">
+    <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Body</th>
+        <th>Author</th>
+    </tr>
+    @foreach (var post in Model)
+    {
+        <tr>
+            <td>post.Id</td>
+            <td>post.Title</td>
+            <td>post.Body</td>
+            <td>post.Author</td>
+        </tr>
+    }
+</table>

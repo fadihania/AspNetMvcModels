@@ -5,7 +5,6 @@ public class PostsController : Controller
 {
     public IActionResult Index()
     {
-        var post = Data.Posts[0];
-        return View(post);
+        return View(Data.Posts);
     }
 }
