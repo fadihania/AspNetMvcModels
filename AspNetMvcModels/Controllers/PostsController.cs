@@ -22,6 +22,7 @@ public class PostsController : Controller
     }
 
     [HttpPost]
+    [ValidateAntiForgeryToken]
     public IActionResult Create(Post post)
     {
         if (!ModelState.IsValid)
