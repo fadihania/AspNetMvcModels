@@ -4,3 +4,25 @@
 }
 
 <h1>@ViewData["Title"]</h1>
+
+<form asp-action="Create">
+    <div>
+        <label asp-for="Id"></label>
+        <input asp-for="Id" type="text" />
+    </div>
+    <div>
+        <label asp-for="Title"></label>
+        <input asp-for="Title" type="text" />
+    </div>
+    <div>
+        <label asp-for="Body"></label>
+        <textarea asp-for="Body"></textarea>
+    </div>
+    <div>
+        <label asp-for="Author"></label>
+        <input asp-for="Author" type="text" />
+    </div>
+    <div>
+        <input type="submit" value="Create" />
+    </div>
+</form>
