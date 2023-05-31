@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AspNetMvcModels.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace AspNetMvcModels.Controllers;
 public class PostsController : Controller
@@ -18,5 +19,12 @@ public class PostsController : Controller
     public IActionResult Create()
     {
         return View();
+    }
+
+    [HttpPost]
+    public IActionResult Create(Post post)
+    {
+        _data.Posts.Add(post);
+        return RedirectToAction("Index");
     }
 }
