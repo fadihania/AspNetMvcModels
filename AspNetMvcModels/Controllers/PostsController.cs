@@ -14,4 +14,9 @@ public class PostsController : Controller
     {
         return View(_data.Posts);
     }
+
+    public IActionResult Create()
+    {
+        return View();
+    }
 }
