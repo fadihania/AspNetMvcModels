@@ -24,6 +24,11 @@ public class PostsController : Controller
     [HttpPost]
     public IActionResult Create(Post post)
     {
+        if (!ModelState.IsValid)
+        {
+            return View(post);
+        }
+
         _data.Posts.Add(post);
         return RedirectToAction("Index");
     }
